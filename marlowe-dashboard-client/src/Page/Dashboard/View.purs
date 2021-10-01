@@ -6,15 +6,18 @@ module Page.Dashboard.View
 import Prologue hiding (Either(..), div)
 import Clipboard (Action(..)) as Clipboard
 import Component.ConfirmInput.View as ConfirmInput
-import Component.Template.View (contractTemplateCard)
-import Component.WalletId.View as WalletId
+import Component.WalletId.View (defaultInput, render) as WalletId
 import Component.Contacts.Lenses (_assets, _companionAppId, _walletNickname, _walletLibrary)
 import Component.Contacts.State (adaToken, getAda)
 import Component.Contacts.Types (WalletDetails)
 import Component.Contacts.View (contactsCard)
+import Component.Icons (Icon(..)) as Icon
+import Component.Icons (icon, icon_)
+import Component.Popper (Placement(..))
+import Component.Template.View (contractTemplateCard)
+import Component.Tooltip.State (tooltip)
+import Component.Tooltip.Types (ReferenceId(..))
 import Css as Css
-import Page.Dashboard.Lenses (_card, _cardOpen, _contractFilter, _contract, _menuOpen, _selectedContract, _selectedContractFollowerAppId, _templateState, _walletDetails, _contactsState)
-import Page.Dashboard.Types (Action(..), Card(..), ContractFilter(..), Input, State, WalletCompanionStatus(..))
 import Data.Lens (preview, view, (^.))
 import Data.Map (Map, filter, isEmpty, toUnfoldable)
 import Data.Maybe (isJust)
@@ -35,16 +38,13 @@ import Images (marloweRunNavLogo, marloweRunNavLogoDark)
 import MainFrame.Types (ChildSlots)
 import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (PubKey, Slot)
-import Material.Icons (Icon(..)) as Icon
-import Material.Icons (icon, icon_)
 import Page.Contract.Lenses (_stateNickname)
 import Page.Contract.State (isContractClosed)
 import Page.Contract.Types (State) as Contract
 import Page.Contract.View (contractPreviewCard, contractScreen)
-import Popper (Placement(..))
+import Page.Dashboard.Lenses (_card, _cardOpen, _contactsState, _contractFilter, _menuOpen, _selectedContract, _selectedContractFollowerAppId, _templateState, _walletDetails)
+import Page.Dashboard.Types (Action(..), Card(..), ContractFilter(..), Input, State, WalletCompanionStatus(..))
 import Prim.TypeError (class Warn, Text)
-import Tooltip.State (tooltip)
-import Tooltip.Types (ReferenceId(..))
 
 dashboardScreen :: forall m. MonadAff m => Input -> State -> ComponentHTML Action ChildSlots m
 dashboardScreen { currentSlot, tzOffset } state =

@@ -1,14 +1,13 @@
-module Popper
-  ( module Popper.Types
+module Component.Popper
+  ( module Component.Popper.Types
   , module ExportedInternal
   , defaultModifiers
   , defaultPreventOverflow
   , defaultFlip
   ) where
 
-import Popper.Types
-import Prelude
-import Popper.Internal (createPopper, forceUpdate, destroyPopper, arrow, computeStyles, applyStyles, eventListeners, popperOffsets, offset, preventOverflow, flipPlacement) as ExportedInternal
+import Component.Popper.Types
+import Component.Popper.Internal (createPopper, forceUpdate, destroyPopper, arrow, computeStyles, applyStyles, eventListeners, popperOffsets, offset, preventOverflow, flipPlacement) as ExportedInternal
 
 defaultModifiers :: Array Modifier
 defaultModifiers =

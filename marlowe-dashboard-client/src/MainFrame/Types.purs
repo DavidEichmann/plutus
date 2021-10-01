@@ -12,7 +12,6 @@ import Analytics (class IsEvent, defaultEvent, toEvent)
 import Component.Contacts.Types (WalletDetails, WalletLibrary)
 import Component.Expand as Expand
 import Component.LoadingSubmitButton.Types as LoadingSubmitButton
-import Page.Dashboard.Types (Action, State) as Dashboard
 import Data.Generic.Rep (class Generic)
 import Data.Map (Map)
 import Data.Time.Duration (Minutes)
@@ -21,10 +20,11 @@ import Halogen.Extra (LifecycleEvent)
 import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (Slot)
 import Page.Contract.Types (State) as Contract
+import Page.Dashboard.Types (Action, State) as Dashboard
 import Page.Welcome.Types (Action, State) as Welcome
 import Plutus.PAB.Webserver.Types (CombinedWSStreamToClient)
 import Toast.Types (Action, State) as Toast
-import Tooltip.Types (ReferenceId)
+import Component.Tooltip.Types (ReferenceId)
 import Web.Socket.Event.CloseEvent (CloseEvent, reason) as WS
 import WebSocket.Support (FromSocket) as WS
 

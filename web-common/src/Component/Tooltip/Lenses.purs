@@ -1,9 +1,7 @@
-module Tooltip.Lenses where
+module Component.Tooltip.Lenses where
 
-import Prelude
-import Data.Lens (Lens', Traversal')
+import Data.Lens (Lens')
 import Data.Lens.Record (prop)
-import Data.Map (Map)
 import Data.Symbol (SProxy(..))
 
 _message :: forall s a. Lens' { message :: a | s } a
