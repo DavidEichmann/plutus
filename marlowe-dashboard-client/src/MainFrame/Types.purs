@@ -8,9 +8,10 @@ module MainFrame.Types
   ) where
 
 import Prologue
+
 import Analytics (class IsEvent, defaultEvent, toEvent)
 import Component.Expand as Expand
-import Contract.Types (State) as Contract
+import Contacts.Types (WalletLibrary, WalletDetails)
 import Dashboard.Types (Action, State) as Dashboard
 import Data.Generic.Rep (class Generic)
 import Data.Map (Map)
@@ -20,10 +21,10 @@ import Halogen.Extra (LifecycleEvent)
 import LoadingSubmitButton.Types as LoadingSubmitButton
 import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (Slot)
+import Page.Contract.Types (State) as Contract
 import Plutus.PAB.Webserver.Types (CombinedWSStreamToClient)
 import Toast.Types (Action, State) as Toast
 import Tooltip.Types (ReferenceId)
-import Contacts.Types (WalletDetails, WalletLibrary)
 import Web.Socket.Event.CloseEvent (CloseEvent, reason) as WS
 import WebSocket.Support (FromSocket) as WS
 import Welcome.Types (Action, State) as Welcome

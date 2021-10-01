@@ -1,4 +1,4 @@
-module Contract.State
+module Page.Contract.State
   ( dummyState
   , mkPlaceholderState
   , mkInitialState
@@ -22,8 +22,6 @@ import Component.Transfer.Types (Termini(..), Transfer, Participant)
 import Contacts.Lenses (_assets, _pubKeyHash, _walletInfo)
 import Contacts.State (adaToken, getAda)
 import Contacts.Types (WalletDetails, WalletNickname)
-import Contract.Lenses (_Started, _executionState, _expandPayments, _namedActions, _participants, _pendingTransaction, _previousSteps, _selectedStep, _userParties)
-import Contract.Types (Action(..), Input, PreviousStep, PreviousStepState(..), StartedState, State(..), Tab(..), scrollContainerRef)
 import Control.Monad.Reader (class MonadAsk, asks)
 import Control.Monad.Reader.Class (ask)
 import Dashboard.Types (Action(..)) as Dashboard
@@ -72,6 +70,8 @@ import Marlowe.HasParties (getParties)
 import Marlowe.Semantics (Contract, MarloweData, MarloweParams, Party(..), Slot, SlotInterval(..), TransactionInput(..), _accounts, _marloweContract, _marloweState, _minSlot, _rolesCurrency)
 import Marlowe.Semantics (Input(..)) as Semantic
 import Marlowe.Semantics as Semantics
+import Page.Contract.Lenses (_Started, _executionState, _expandPayments, _namedActions, _participants, _pendingTransaction, _previousSteps, _selectedStep, _userParties)
+import Page.Contract.Types (Action(..), Input, PreviousStep, PreviousStepState(..), StartedState, State(..), Tab(..), scrollContainerRef)
 import Toast.Types (ajaxErrorToast, successToast)
 import Web.DOM.Element (getElementsByClassName)
 import Web.DOM.HTMLCollection as HTMLCollection

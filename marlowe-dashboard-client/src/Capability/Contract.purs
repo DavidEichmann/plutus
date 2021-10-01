@@ -19,7 +19,6 @@ import AppM (AppM)
 import Bridge (toBack, toFront)
 import Control.Monad.Except (lift, runExceptT)
 import Data.Lens (view)
-import Data.Maybe
 import Data.RawJson (RawJson)
 import Foreign.Generic (class Encode)
 import Halogen (HalogenM)

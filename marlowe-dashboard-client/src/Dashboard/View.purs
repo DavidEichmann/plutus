@@ -11,10 +11,6 @@ import Contacts.Lenses (_assets, _companionAppId, _walletNickname, _walletLibrar
 import Contacts.State (adaToken, getAda)
 import Contacts.Types (WalletDetails)
 import Contacts.View (contactsCard)
-import Contract.Lenses (_stateNickname)
-import Contract.State (isContractClosed)
-import Contract.Types (State) as Contract
-import Contract.View (contractPreviewCard, contractScreen)
 import Css as Css
 import Dashboard.Lenses (_card, _cardOpen, _contactsState, _contractFilter, _menuOpen, _selectedContract, _selectedContractFollowerAppId, _templateState, _walletDetails)
 import Dashboard.Types (Action(..), Card(..), ContractFilter(..), Input, State, WalletCompanionStatus(..))
@@ -40,6 +36,10 @@ import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (PubKey, Slot)
 import Material.Icons (Icon(..)) as Icon
 import Material.Icons (icon, icon_)
+import Page.Contract.Lenses (_stateNickname)
+import Page.Contract.State (isContractClosed)
+import Page.Contract.Types (State) as Contract
+import Page.Contract.View (contractPreviewCard, contractScreen)
 import Popper (Placement(..))
 import Prim.TypeError (class Warn, Text)
 import Template.View (contractTemplateCard)

@@ -17,8 +17,6 @@ import Component.Row (row)
 import Component.Row as Row
 import Component.Transfer.View (transfer)
 import Component.Transfer.Types (Termini(..))
-import Contract.State (currentStep, partyToParticipant, paymentToTransfer, toInput)
-import Contract.Types (Action(..))
 import Data.Array (fromFoldable)
 import Data.Default (default)
 import Data.Foldable (length)
@@ -33,6 +31,8 @@ import Marlowe.Semantics (ChoiceId(..), Contract(..), TransactionOutput(..)) as 
 import Marlowe.Semantics (Token(..), computeTransaction)
 import Material.Icons (icon_)
 import Material.Icons as Icon
+import Page.Contract.State (currentStep, partyToParticipant, paymentToTransfer, toInput)
+import Page.Contract.Types (Action(..))
 
 render :: forall m. Monad m => Input -> ComponentHTML Action ChildSlots m
 render =
