@@ -6,6 +6,7 @@ module Dashboard.View
 import Prologue hiding (Either(..), div)
 import Clipboard (Action(..)) as Clipboard
 import Component.ConfirmInput.View as ConfirmInput
+import Component.Template.View (contractTemplateCard)
 import Component.WalletId.View as WalletId
 import Contacts.Lenses (_assets, _companionAppId, _walletNickname, _walletLibrary)
 import Contacts.State (adaToken, getAda)
@@ -42,7 +43,6 @@ import Page.Contract.Types (State) as Contract
 import Page.Contract.View (contractPreviewCard, contractScreen)
 import Popper (Placement(..))
 import Prim.TypeError (class Warn, Text)
-import Template.View (contractTemplateCard)
 import Tooltip.State (tooltip)
 import Tooltip.Types (ReferenceId(..))
 

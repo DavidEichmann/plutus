@@ -11,6 +11,7 @@ import Prologue
 import Analytics (class IsEvent, defaultEvent, toEvent)
 import Clipboard (Action) as Clipboard
 import Component.ConfirmInput.Types as ConfirmInput
+import Component.Template.Types (Action, State) as Template
 import Contacts.Types (Action, State) as Contacts
 import Contacts.Types (WalletDetails, WalletNickname)
 import Data.Map (Map)
@@ -19,8 +20,7 @@ import Data.Time.Duration (Minutes)
 import Marlowe.Client (ContractHistory)
 import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (MarloweData, MarloweParams, Slot)
-import Page.Contract.Types as Contract
-import Template.Types (Action, State) as Template
+import Page.Contract.Types (Action, State) as Contract
 
 type State
   = { contactsState :: Contacts.State
