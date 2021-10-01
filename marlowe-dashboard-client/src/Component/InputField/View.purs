@@ -1,8 +1,11 @@
-module InputField.View (renderInput) where
+module Component.InputField.View (renderInput) where
 
 import Prologue hiding (div, min)
 import Component.Input.Types (InputType(..)) as Input
 import Component.Input.View (renderWithChildren) as Input
+import Component.InputField.Lenses (_additionalCss, _after, _before, _dropdownLocked, _dropdownOpen, _pristine, _placeholder, _readOnly, _value, _valueOptions, _numberFormat, _id_)
+import Component.InputField.State (validate)
+import Component.InputField.Types (class InputFieldError, Action(..), InputDisplayOptions, State, inputErrorToString)
 import Control.Alt ((<|>))
 import Control.MonadPlus (guard)
 import Css as Css
@@ -16,22 +19,6 @@ import Halogen.Css (classNames)
 import Halogen.HTML (HTML, a, div, span_, text)
 import Halogen.HTML.Events (onMouseEnter, onMouseLeave)
 import Halogen.HTML.Events.Extra (onClick_)
-import InputField.Lenses
-  ( _additionalCss
-  , _after
-  , _before
-  , _dropdownLocked
-  , _dropdownOpen
-  , _pristine
-  , _placeholder
-  , _readOnly
-  , _value
-  , _valueOptions
-  , _numberFormat
-  , _id_
-  )
-import InputField.State (validate)
-import InputField.Types (class InputFieldError, Action(..), InputDisplayOptions, State, inputErrorToString)
 import Marlowe.Extended.Metadata (NumberFormat(..))
 
 inputCss :: forall w i. InputDisplayOptions w i -> Boolean -> Array String
