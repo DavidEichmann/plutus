@@ -8,10 +8,10 @@ import Clipboard (Action(..)) as Clipboard
 import Component.ConfirmInput.View as ConfirmInput
 import Component.Template.View (contractTemplateCard)
 import Component.WalletId.View as WalletId
-import Contacts.Lenses (_assets, _companionAppId, _walletNickname, _walletLibrary)
-import Contacts.State (adaToken, getAda)
-import Contacts.Types (WalletDetails)
-import Contacts.View (contactsCard)
+import Component.Contacts.Lenses (_assets, _companionAppId, _walletNickname, _walletLibrary)
+import Component.Contacts.State (adaToken, getAda)
+import Component.Contacts.Types (WalletDetails)
+import Component.Contacts.View (contactsCard)
 import Css as Css
 import Dashboard.Lenses (_card, _cardOpen, _contactsState, _contractFilter, _menuOpen, _selectedContract, _selectedContractFollowerAppId, _templateState, _walletDetails)
 import Dashboard.Types (Action(..), Card(..), ContractFilter(..), Input, State, WalletCompanionStatus(..))

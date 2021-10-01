@@ -20,11 +20,11 @@ import Component.Template.State (dummyState, handleAction, initialState) as Temp
 import Component.Template.State (instantiateExtendedContract)
 import Component.Template.Types (Action(..), State) as Template
 import Component.Template.Types (ContractSetupStage(..))
-import Contacts.Lenses (_assets, _cardSection, _pubKeyHash, _walletInfo, _walletLibrary, _walletNickname)
-import Contacts.State (defaultWalletDetails, getAda)
-import Contacts.State (handleAction, mkInitialState) as Contacts
-import Contacts.Types (Action(..), State) as Contacts
-import Contacts.Types (CardSection(..), WalletDetails, WalletLibrary)
+import Component.Contacts.Lenses (_assets, _cardSection, _pubKeyHash, _walletInfo, _walletLibrary, _walletNickname)
+import Component.Contacts.State (defaultWalletDetails, getAda)
+import Component.Contacts.State (handleAction, mkInitialState) as Contacts
+import Component.Contacts.Types (Action(..), State) as Contacts
+import Component.Contacts.Types (CardSection(..), WalletDetails, WalletLibrary)
 import Control.Monad.Reader (class MonadAsk)
 import Control.Monad.Reader.Class (ask)
 import Dashboard.Lenses (_card, _cardOpen, _contractFilter, _contract, _contracts, _menuOpen, _selectedContract, _selectedContractFollowerAppId, _templateState, _walletCompanionStatus, _contactsState, _walletDetails)

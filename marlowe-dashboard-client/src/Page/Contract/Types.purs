@@ -14,6 +14,7 @@ module Page.Contract.Types
 
 import Prologue
 import Analytics (class IsEvent, defaultEvent)
+import Component.Contacts.Types (WalletDetails, WalletNickname)
 import Data.Map (Map)
 import Data.Set (Set)
 import Data.Time.Duration (Minutes)
@@ -23,7 +24,6 @@ import Marlowe.Execution.Types (State) as Execution
 import Marlowe.Extended.Metadata (MetaData)
 import Marlowe.PAB (PlutusAppId)
 import Marlowe.Semantics (Accounts, ChoiceId, ChosenNum, MarloweParams, Party, Payment, Slot, TransactionInput)
-import Contacts.Types (WalletDetails, WalletNickname)
 
 data State
   = Starting StartingState

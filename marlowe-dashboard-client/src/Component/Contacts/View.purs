@@ -1,18 +1,18 @@
-module Contacts.View
+module Component.Contacts.View
   ( contactsCard
   , walletIdTip
   ) where
 
 import Prelude hiding (div)
 import Clipboard (Action(..)) as Clipboard
+import Component.Contacts.Lenses (_cardSection, _companionAppId, _walletIdInput, _walletLibrary, _walletNickname, _walletNicknameInput)
+import Component.Contacts.Types (Action(..), CardSection(..), State, WalletDetails, WalletIdError, WalletLibrary, WalletNicknameError)
 import Component.InputField.Lenses (_value)
 import Component.InputField.State (validate)
 import Component.InputField.Types (State) as InputField
 import Component.InputField.View (renderInput)
 import Component.Label.View as Label
 import Component.WalletId.View as WalletId
-import Contacts.Lenses (_cardSection, _companionAppId, _walletIdInput, _walletLibrary, _walletNickname, _walletNicknameInput)
-import Contacts.Types (Action(..), CardSection(..), State, WalletDetails, WalletIdError, WalletLibrary, WalletNicknameError)
 import Css as Css
 import Data.Lens (view, (^.))
 import Data.Map (isEmpty, toUnfoldable)
