@@ -4,7 +4,6 @@ module Page.Contract.View
   ) where
 
 import Prologue hiding (div)
-
 import Component.Transfer.Types (Termini(..))
 import Component.Transfer.View (transfer)
 import Contacts.State (adaToken)

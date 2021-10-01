@@ -5,7 +5,6 @@ module Dashboard.State
   ) where
 
 import Prologue
-
 import Capability.Contract (class ManageContract)
 import Capability.MainFrameLoop (class MainFrameLoop, callMainFrameAction)
 import Capability.Marlowe (class ManageMarlowe, createContract, createPendingFollowerApp, followContract, followContractWithPendingFollowerApp, getFollowerApps, getRoleContracts, redeem, subscribeToPlutusApp)
@@ -17,6 +16,7 @@ import Component.InputField.Lenses (_value)
 import Component.InputField.Types (Action(..)) as InputField
 import Contacts.Lenses (_assets, _cardSection, _pubKeyHash, _walletInfo, _walletLibrary, _walletNickname)
 import Contacts.State (defaultWalletDetails, getAda)
+import Component.LoadingSubmitButton.Types (Query(..), _submitButtonSlot)
 import Contacts.State (handleAction, mkInitialState) as Contacts
 import Contacts.Types (Action(..), State) as Contacts
 import Contacts.Types (CardSection(..), WalletDetails, WalletLibrary)
@@ -42,7 +42,6 @@ import Effect.Aff.Class (class MonadAff)
 import Env (DataProvider(..), Env)
 import Halogen (HalogenM, modify_, query, tell)
 import Halogen.Extra (mapMaybeSubmodule, mapSubmodule)
-import LoadingSubmitButton.Types (Query(..), _submitButtonSlot)
 import MainFrame.Types (Action(..)) as MainFrame
 import MainFrame.Types (ChildSlots, Msg)
 import Marlowe.Client (ContractHistory, _chHistory, _chParams)
