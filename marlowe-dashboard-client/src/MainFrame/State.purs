@@ -12,9 +12,6 @@ import Component.Contacts.Lenses (_assets, _companionAppId, _marloweAppId, _prev
 import Control.Monad.Except (runExcept)
 import Control.Monad.Reader (class MonadAsk)
 import Control.Monad.Reader.Class (ask)
-import Dashboard.Lenses (_contracts, _walletDetails)
-import Dashboard.State (dummyState, handleAction, mkInitialState) as Dashboard
-import Dashboard.Types (Action(..), State) as Dashboard
 import Data.Foldable (for_)
 import Data.Lens (assign, set, use, view)
 import Data.Lens.Extra (peruse)
@@ -35,6 +32,9 @@ import MainFrame.Lenses (_currentSlot, _dashboardState, _subState, _toast, _tzOf
 import MainFrame.Types (Action(..), ChildSlots, Msg, Query(..), State, WebSocketStatus(..))
 import MainFrame.View (render)
 import Marlowe.PAB (PlutusAppId)
+import Page.Dashboard.Lenses (_contracts, _walletDetails)
+import Page.Dashboard.State (dummyState, handleAction, mkInitialState) as Dashboard
+import Page.Dashboard.Types (Action(..), State) as Dashboard
 import Page.Welcome.Lenses (_walletLibrary)
 import Page.Welcome.State (handleAction, dummyState, mkInitialState) as Welcome
 import Page.Welcome.Types (Action, State) as Welcome

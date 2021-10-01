@@ -25,7 +25,7 @@ import Component.LoadingSubmitButton.Types (Query(..), _submitButtonSlot)
 import Component.Transfer.Types (Termini(..), Transfer, Participant)
 import Control.Monad.Reader (class MonadAsk, asks)
 import Control.Monad.Reader.Class (ask)
-import Dashboard.Types (Action(..)) as Dashboard
+import Page.Dashboard.Types (Action(..)) as Dashboard
 import Data.Array (difference, filter, foldl, index, length, mapMaybe, modifyAt, null)
 import Data.Array as Array
 import Data.Array.NonEmpty (NonEmptyArray)
