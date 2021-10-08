@@ -1,12 +1,11 @@
 module Component.Projects.Types where
 
-import Prelude
+import Prologue
 import Analytics (class IsEvent, Event)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Lens (Lens', has)
 import Data.Lens.Record (prop)
-import Data.Maybe (Maybe(..))
 import Data.Symbol (SProxy(..))
 import Foreign.Class (class Decode, class Encode)
 import Foreign.Generic.EnumEncoding (defaultGenericEnumOptions, genericDecodeEnum, genericEncodeEnum)

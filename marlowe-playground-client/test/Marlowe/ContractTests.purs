@@ -1,21 +1,20 @@
 -- TODO: Move these tests to marlowe-commons
 module Marlowe.ContractTests where
 
-import Prelude
+import Prologue
 import Control.Bind (bindFlipped)
 import Control.Monad.Gen (class MonadGen, chooseInt, elements, oneOf)
 import Control.Monad.Rec.Class (class MonadRec)
 import Control.Monad.State (StateT, evalStateT, execState, get, gets, lift)
-import Data.Array (length)
 import Data.Array.NonEmpty (NonEmptyArray, fromArray)
 import Data.BigInteger (BigInteger)
 import Data.BigInteger as BigInteger
-import Data.Either (Either(..), hush)
+import Data.Either (hush)
 import Data.Int (round)
 import Data.Lens (_Just, preview, previewOn, (^.))
 import Data.Lens.NonEmptyList (_Head)
 import Data.Map as Map
-import Data.Maybe (Maybe(..), fromJust)
+import Data.Maybe (fromJust)
 import Data.NonEmpty ((:|))
 import Data.Tuple.Nested ((/\))
 import Examples.Marlowe.Contracts as Contracts

@@ -1,10 +1,9 @@
 module Component.Demos.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.Demos.Types (Action(..), Demo)
 import Component.Modal.ViewHelpers (modalHeader)
 import Component.Projects.Types (Lang(..))
-import Data.Maybe (Maybe(..))
 import Data.Newtype (wrap)
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ClassName(..), ComponentHTML)

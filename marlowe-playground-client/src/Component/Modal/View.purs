@@ -2,13 +2,12 @@ module Component.Modal.View
   ( modal
   ) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.ConfirmUnsavedNavigation.View (render) as ConfirmUnsavedNavigation
 import Component.Demos.View (render) as Demos
 import Component.NewProject.View (render) as NewProject
 import Component.Projects.View (render) as Projects
 import Data.Lens ((^.))
-import Data.Maybe (Maybe(..))
 import Effect.Aff.Class (class MonadAff)
 import GistButtons (authButton)
 import Halogen (ComponentHTML)

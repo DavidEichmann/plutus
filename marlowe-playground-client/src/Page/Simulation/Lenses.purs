@@ -1,4 +1,4 @@
-module Page.SimulationPage.Lenses where
+module Page.Simulation.Lenses where
 
 import Component.BottomPanel.Types as BottomPanel
 import Data.Lens (Lens')

@@ -2,8 +2,7 @@ module Component.Modal.ViewHelpers
   ( modalHeader
   ) where
 
-import Prelude hiding (div)
-import Data.Maybe (Maybe(..))
+import Prologue hiding (div)
 import Halogen (ComponentHTML)
 import Halogen.Classes (closeModal)
 import Halogen.HTML (ClassName(ClassName), HTML, div, h2, img, text)

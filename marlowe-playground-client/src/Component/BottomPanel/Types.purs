@@ -1,11 +1,10 @@
 module Component.BottomPanel.Types where
 
-import Prelude
+import Prologue
 import Analytics (class IsEvent, Event)
 import Analytics as A
 import Data.Lens (Lens')
 import Data.Lens.Record (prop)
-import Data.Maybe (Maybe(..))
 import Data.Symbol (SProxy(..))
 
 -- This component is an UI element that allows you to have different panels with titles at the bottom of the page. Because the children of this component is set by the page, the Action type

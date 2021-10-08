@@ -1,14 +1,14 @@
 module Page.BlocklyEditor.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Blockly.Internal (block, blockType, style, x, xml, y)
-import BottomPanel.Types (Action(..)) as BottomPanel
-import BottomPanel.View (render) as BottomPanel
 import Component.Blockly.State as Blockly
+import Component.BottomPanel.Types (Action(..)) as BottomPanel
+import Component.BottomPanel.View (render) as BottomPanel
 import Data.Array as Array
 import Data.Bifunctor (bimap)
 import Data.Lens ((^.))
-import Data.Maybe (Maybe(..), isJust)
+import Data.Maybe (isJust)
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ComponentHTML)
 import Halogen.Classes (flex, flexCol, fullHeight, group, maxH70p, minH0, overflowHidden, paddingX)

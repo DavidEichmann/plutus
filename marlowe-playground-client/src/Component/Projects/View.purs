@@ -1,15 +1,13 @@
 module Component.Projects.View (render) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.Modal.ViewHelpers (modalHeader)
 import Component.Projects.Types (Action(..), Lang(..), State, _projects, modalIsLoading)
 import Data.Array (filter)
 import Data.DateTime.ISO as ISO
-import Data.Either (Either(..))
 import Data.Formatter.DateTime (FormatterCommand(..), format)
 import Data.Lens (to, (^.))
 import Data.List (fromFoldable)
-import Data.Maybe (Maybe(..))
 import Data.Newtype (unwrap)
 import Effect.Aff.Class (class MonadAff)
 import Gist (Gist, gistCreatedAt, gistDescription, gistId, gistUpdatedAt)

@@ -1,8 +1,7 @@
-module ConfirmUnsavedNavigation.Types where
+module Component.ConfirmUnsavedNavigation.Types where
 
-import Prelude
+import Prologue
 import Analytics (class IsEvent, defaultEvent)
-import Data.Maybe (Maybe(..))
 
 data Action
   = SaveProject

@@ -1,14 +1,11 @@
-module Page.SimulationPage.BottomPanel (panelContents) where
+module Page.Simulation.BottomPanel (panelContents) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Data.BigInteger (BigInteger)
-import Data.Either (Either(..))
 import Data.Foldable (foldMap)
 import Data.Lens (preview, previewOn, to, view, (^.))
 import Data.Lens.NonEmptyList (_Head)
 import Data.Map as Map
-import Data.Maybe (Maybe(..))
-import Data.Tuple (Tuple(..))
 import Data.Tuple.Nested ((/\))
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ComponentHTML)

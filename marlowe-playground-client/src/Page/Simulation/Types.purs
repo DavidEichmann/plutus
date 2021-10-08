@@ -1,7 +1,7 @@
 -- A separate module for types that are shared between Simulation and Simulation.BottomPanel
-module Page.SimulationPage.Types where
+module Page.Simulation.Types where
 
-import Prelude
+import Prologue
 import Analytics (class IsEvent, Event)
 import Analytics as A
 import Component.BottomPanel.Types as BottomPanel
@@ -9,7 +9,6 @@ import Data.BigInteger (BigInteger)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.List.Types (NonEmptyList)
-import Data.Maybe (Maybe(..))
 import Halogen.Monaco as Monaco
 import Help (HelpContext)
 import Marlowe.Semantics (Bound, ChoiceId, ChosenNum, Input, Slot)

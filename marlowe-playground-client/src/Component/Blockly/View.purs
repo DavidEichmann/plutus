@@ -1,8 +1,7 @@
 module Component.Blockly.View (render) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.Blockly.Types (blocklyRef)
-import Data.Maybe (Maybe(..))
 import Halogen (ClassName(..))
 import Halogen.Classes (fullHeight, fullWidth)
 import Halogen.HTML (HTML, div, text)

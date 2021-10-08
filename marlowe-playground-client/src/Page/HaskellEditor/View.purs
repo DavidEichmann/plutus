@@ -1,15 +1,13 @@
 module Page.HaskellEditor.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.BottomPanel.Types (Action(..)) as BottomPanel
 import Component.BottomPanel.View (render) as BottomPanel
 import Component.MetadataTab.View (metadataView)
 import Data.Array as Array
 import Data.Bifunctor (bimap)
-import Data.Either (Either(..))
 import Data.Enum (toEnum, upFromIncluding)
 import Data.Lens (_Right, has, to, view, (^.))
-import Data.Maybe (Maybe(..))
 import Data.String (Pattern(..), split)
 import Data.String as String
 import Effect.Aff.Class (class MonadAff)

@@ -1,6 +1,6 @@
 module Component.MetadataTab.View (metadataView) where
 
-import Prelude hiding (div, min)
+import Prologue hiding (div, min)
 import Component.MetadataTab.Types (MetadataAction(..))
 import Data.Array (concat, concatMap)
 import Data.Foldable (foldMap)
@@ -11,7 +11,6 @@ import Data.Map (Map)
 import Data.Map as Map
 import Data.Map.Ordered.OMap (OMap)
 import Data.Map.Ordered.OMap as OMap
-import Data.Maybe (Maybe(..))
 import Data.Set (Set, toUnfoldable)
 import Data.Set.Ordered.OSet (OSet)
 import Data.Tuple.Nested (type (/\), (/\))

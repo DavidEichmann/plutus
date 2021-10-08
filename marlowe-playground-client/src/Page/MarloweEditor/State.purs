@@ -3,24 +3,23 @@ module Page.MarloweEditor.State
   , editorGetValue
   ) where
 
-import Prelude hiding (div)
-import BottomPanel.State (handleAction) as BottomPanel
-import BottomPanel.Types (Action(..), State) as BottomPanel
+import Prologue hiding (div)
 import CloseAnalysis (analyseClose)
+import Component.BottomPanel.State (handleAction) as BottomPanel
+import Component.BottomPanel.Types (Action(..), State) as BottomPanel
 import Control.Monad.Except (ExceptT, lift, runExceptT)
 import Control.Monad.Maybe.Extra (hoistMaybe)
 import Control.Monad.Maybe.Trans (MaybeT(..), runMaybeT)
 import Control.Monad.Reader (class MonadAsk)
 import Data.Array as Array
-import Data.Either (Either(..), hush)
+import Data.Either (hush)
 import Data.Foldable (for_)
 import Data.Lens (assign, modifying, over, preview, set, use)
 import Data.Lens.Index (ix)
 import Data.Map as Map
-import Data.Maybe (Maybe(..), fromMaybe, maybe)
+import Data.Maybe (fromMaybe, maybe)
 import Data.String (Pattern(..), codePointFromChar, contains)
 import Data.String as String
-import Data.Tuple (Tuple(..))
 import Effect.Aff.Class (class MonadAff, liftAff)
 import Env (Env)
 import Examples.Marlowe.Contracts (example) as ME

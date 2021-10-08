@@ -1,9 +1,8 @@
 module MainFrame.Types where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Analytics (class IsEvent, defaultEvent, toEvent)
 import Auth (AuthStatus)
-import BlocklyEditor.Types as BE
 import Component.Blockly.Types as Blockly
 import Component.ConfirmUnsavedNavigation.Types as ConfirmUnsavedNavigation
 import Component.Demos.Types as Demos
@@ -11,12 +10,10 @@ import Component.NewProject.Types as NewProject
 import Component.Projects.Types (Lang(..))
 import Component.Projects.Types as Projects
 import Component.Tooltip.Types (ReferenceId)
-import Data.Either (Either)
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Lens (Lens', has, (^.))
 import Data.Lens.Record (prop)
-import Data.Maybe (Maybe(..))
 import Data.Newtype (class Newtype)
 import Data.Symbol (SProxy(..))
 import Foreign.Class (class Decode, class Encode)
@@ -31,6 +28,7 @@ import Halogen.Monaco as Monaco
 import Marlowe.Extended.Metadata (MetaData)
 import Network.RemoteData (_Loading)
 import Page.ActusBlockly as AB
+import Page.BlocklyEditor.Types as BE
 import Page.HaskellEditor.Types as HE
 import Page.JavascriptEditor.Types (CompilationState)
 import Page.JavascriptEditor.Types as JS

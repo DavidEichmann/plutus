@@ -1,6 +1,6 @@
 module Page.MarloweEditor.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.BottomPanel.Types (Action(..)) as BottomPanel
 import Component.BottomPanel.View (render) as BottomPanel
 import Component.Popper (Placement(..))
@@ -10,7 +10,6 @@ import Data.Array as Array
 import Data.Bifunctor (bimap)
 import Data.Enum (toEnum, upFromIncluding)
 import Data.Lens ((^.))
-import Data.Maybe (Maybe(..))
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ClassName(..), ComponentHTML)
 import Halogen.Classes (flex, flexCol, flexGrow, fullHeight, group, maxH70p, minH0, overflowHidden, paddingX)

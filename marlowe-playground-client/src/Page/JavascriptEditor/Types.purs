@@ -1,17 +1,15 @@
 module Page.JavascriptEditor.Types where
 
-import Prelude
+import Prologue
 import Analytics (class IsEvent, Event)
 import Analytics as A
 import Component.BottomPanel.Types as BottomPanel
 import Component.MetadataTab.Types (MetadataAction, showConstructor)
 import Data.BigInteger (BigInteger)
-import Data.Either (Either(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Lens (Getter', Lens', Prism', Fold', prism, to, (^.))
 import Data.Lens.Record (prop)
-import Data.Maybe (Maybe(..))
 import Data.Symbol (SProxy(..))
 import Halogen.Monaco (KeyBindings(..))
 import Halogen.Monaco as Monaco

@@ -1,6 +1,6 @@
 module Component.MetadataTab.State (carryMetadataAction) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.MetadataTab.Types (MetadataAction(..))
 import Control.Monad.Reader (class MonadAsk)
 import Data.Lens (assign, modifying, over, set)

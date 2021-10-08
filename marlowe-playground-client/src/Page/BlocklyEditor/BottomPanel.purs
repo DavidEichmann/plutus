@@ -2,15 +2,14 @@ module Page.BlocklyEditor.BottomPanel
   ( panelContents
   ) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.MetadataTab.View (metadataView)
 import Data.Array as Array
 import Data.Lens (to, (^.))
-import Data.Maybe (Maybe(..))
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ComponentHTML)
 import Halogen.Classes (flex, flexCol, fontBold, fullWidth, grid, gridColsDescriptionLocation, justifySelfEnd, paddingRight, underline)
-import Halogen.HTML (HTML, a, div, div_, pre_, section, section_, span_, text)
+import Halogen.HTML (a, div, div_, pre_, section, section_, span_, text)
 import Halogen.HTML.Events (onClick)
 import Halogen.HTML.Properties (class_, classes)
 import MainFrame.Types (ChildSlots)

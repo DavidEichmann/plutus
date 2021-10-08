@@ -1,6 +1,6 @@
 module Component.Blockly.Types where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Blockly.Dom (Block)
 import Blockly.Internal (BlockDefinition, XML)
 import Blockly.Toolbox (Toolbox)
@@ -8,7 +8,6 @@ import Blockly.Types as BT
 import Data.Lens (Lens')
 import Data.Lens.Record (prop)
 import Data.List (List)
-import Data.Maybe (Maybe(..))
 import Data.Symbol (SProxy(..))
 import Halogen (RefLabel(..), SubscriptionId)
 import Marlowe.Linter (Warning)

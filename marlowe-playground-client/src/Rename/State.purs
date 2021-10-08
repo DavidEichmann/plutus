@@ -1,9 +1,8 @@
 module Rename.State where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.Modal.ViewHelpers (modalHeader)
 import Data.Lens (assign, (^.))
-import Data.Maybe (Maybe(..))
 import Effect.Aff.Class (class MonadAff)
 import Halogen (ClassName(..), ComponentHTML, HalogenM)
 import Halogen.Classes (modalContent)

@@ -1,6 +1,6 @@
 module Component.Blockly.State (blocklyComponent) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Blockly.Dom (explainError, getDom)
 import Blockly.Events (newElementId)
 import Blockly.Generator (newBlock)
@@ -12,9 +12,8 @@ import Component.Blockly.Types (Action(..), Message(..), Query(..), State, _bloc
 import Component.Blockly.View (render)
 import Control.Monad.Except (ExceptT(..), runExceptT, withExceptT)
 import Control.Monad.Maybe.Trans (MaybeT(..), runMaybeT)
-import Data.Either (Either(..), either, note)
+import Data.Either (either, note)
 import Data.Lens (assign, set, use, view)
-import Data.Maybe (Maybe(..))
 import Data.Traversable (for, for_)
 import Effect.Aff.Class (class MonadAff)
 import Effect.Exception.Unsafe (unsafeThrow)

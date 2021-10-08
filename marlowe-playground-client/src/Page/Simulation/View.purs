@@ -1,6 +1,6 @@
-module Page.SimulationPage.View where
+module Page.Simulation.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Component.BottomPanel.Types as BottomPanelTypes
 import Component.BottomPanel.View as BottomPanel
 import Component.Hint.State (hint)
@@ -17,11 +17,10 @@ import Data.Lens.NonEmptyList (_Head)
 import Data.Map (Map)
 import Data.Map as Map
 import Data.Map.Ordered.OMap as OMap
-import Data.Maybe (Maybe(..), fromMaybe, isJust, maybe)
+import Data.Maybe (fromMaybe, isJust, maybe)
 import Data.Newtype (unwrap, wrap)
 import Data.Set.Ordered.OSet (OSet)
 import Data.String (trim)
-import Data.Tuple (Tuple(..), snd)
 import Data.Tuple.Nested (type (/\), (/\))
 import Effect.Aff.Class (class MonadAff)
 import Effect.Class (liftEffect)

@@ -1,10 +1,10 @@
 module MainFrame.View where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import Auth (_GithubUser, authStatusAuthRole)
 import Component.Modal.View (modal)
 import Data.Lens (has, (^.))
-import Data.Maybe (Maybe(..), isNothing)
+import Data.Maybe (isNothing)
 import Effect.Aff.Class (class MonadAff)
 import Gists.Types (GistAction(..))
 import Halogen (ComponentHTML)

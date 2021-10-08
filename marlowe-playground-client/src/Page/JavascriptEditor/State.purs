@@ -4,18 +4,17 @@ module Page.JavascriptEditor.State
   , editorGetValue
   ) where
 
-import Prelude hiding (div)
+import Prologue hiding (div)
 import CloseAnalysis (analyseClose)
 import Component.BottomPanel.State (handleAction) as BottomPanel
 import Component.BottomPanel.Types (Action(..), State) as BottomPanel
 import Control.Monad.Reader (class MonadAsk)
 import Data.Array as Array
-import Data.Either (Either(..))
 import Data.Lens (assign, modifying, over, set, use, view)
 import Data.List ((:))
 import Data.List as List
 import Data.Map as Map
-import Data.Maybe (Maybe(..), fromMaybe, maybe)
+import Data.Maybe (fromMaybe, maybe)
 import Data.Newtype (unwrap)
 import Data.String (drop, joinWith, length, take)
 import Data.Tuple.Nested ((/\))
@@ -105,14 +104,13 @@ handleAction (HandleEditorMessage (Monaco.TextChanged text)) = do
         if ((mContent == Nothing) || (mContent == Just prunedText)) then
           -- The case where `mContent == Just prunedText` is to prevent potential infinite loops, it should not happen
           assign _compilationResult NotCompiled
+        else if checkJSboilerplate text && checkDecorationPosition numLines mRangeHeader mRangeFooter then
+          ( do
+              liftEffect $ SessionStorage.setItem jsBufferLocalStorageKey prunedText
+              assign _compilationResult NotCompiled
+          )
         else
-          if checkJSboilerplate text && checkDecorationPosition numLines mRangeHeader mRangeFooter then
-            ( do
-                liftEffect $ SessionStorage.setItem jsBufferLocalStorageKey prunedText
-                assign _compilationResult NotCompiled
-            )
-          else
-            editorSetValue (fromMaybe "" mContent)
+          editorSetValue (fromMaybe "" mContent)
       Nothing -> editorSetValue prunedText
 
 handleAction (ChangeKeyBindings bindings) = do
